@@ -578,3 +578,142 @@ a:hover {
     color: #16191a;
     text-decoration: none;
 }
+
+
+/*html template - topics*/
+
+.mtop {
+    position: relative;
+    padding: 5px 5px 5px 5px;
+    background-color: #f4fbfc;
+    width: 840px;
+    margin-left: 15px;
+}
+
+.mtopwrap {
+    position: relative;
+    padding: 10px 15px;
+    border-bottom: 3px solid #cdeaf0;
+    margin: 0px -5px;
+    min-height: 47px;
+}
+
+.mtop1 {
+    position: relative;
+    width: 300px;
+}
+
+.mtop h1 {
+    margin: 0px;
+    border-left: 20px solid #f4fbfc;
+    background-color: #f3e88a;
+    width: 360px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.mtop h1 a {
+    width: 300px;
+    color: #16191a!important;
+    display: inline-block;
+    margin: 0px;
+    font-family: 'roboto';
+    font-weight: 600;
+    text-transform: lowercase!important;
+    font-style: italic!important;
+    padding-left: 0px;
+    margin-left: -20px;
+    font-size: 17px;
+}
+
+.mtop h1 a:hover {
+    padding-left: 15px;
+    width: 280px;
+}
+
+.mtop1 span {
+    color: #16191a;
+    display: block;
+    margin-top: 6px;
+    font-family: 'playfair display';
+    font-style: italic;
+}
+
+.mtop1 span b {
+    font-family: 'roboto';
+    text-transform: lowercase!important;
+    font-weight: 500;
+}
+
+.mtop1 span a {
+    background-color: #fbb6b6;
+    color: #16191a;
+    font-family: 'roboto';
+    text-transform: lowercase!important;
+}
+
+.mtop1 h2 {
+    margin: 5px;
+    font-family: playfair display;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    position: absolute;
+    top: -3px;
+    left: 310px;
+    width: 150px;
+}
+
+.mtop2 {
+    position: absolute;
+    top: 8px;
+    left: 500px;
+    font-family: 'roboto';
+    font-size: 13px;
+    letter-spacing: -1px;
+}
+
+.mtop2 span {
+    display: block;
+    margin: 0px;
+    position: relative;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: right;
+    color: #fbb6b6;
+}
+
+.mtop2 b {
+    padding: 5px;
+    position: absolute;
+    color: #16191a;
+    position: absolute;
+    right: -57px;
+    top: -5px;
+    text-align: right!important;
+    display: block;
+    width: 100px;
+    font-family: 'playfair display';
+    font-size: 16px;
+    letter-spacing: -1px;
+}
+
+.mtop2 a {
+    color: #fbb6b6!important;
+}
+
+.mtop3 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    text-align: justify;
+    width: 200px;
+    line-height: 23px;
+    color: #16191a;
+    text-transform: lowercase;
+    font-weight: 600!important;
+}
+
+.mtop3 b {
+    font-weight: 500!important;
+}
