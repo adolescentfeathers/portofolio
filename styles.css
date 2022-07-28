@@ -788,3 +788,323 @@ input[type=reset] {
 .codebuttons {
     font-size: 10px;
 }
+
+
+/*global general table/div row styles*/
+
+.row1,
+.row2,
+.row3,
+.row4 {
+    padding: 5px;
+}
+
+.profile-left,
+.profile-right,
+#profile-heading .row2 {
+    background-color: #f4fbfc;
+    padding: 3px;
+}
+
+.profile-left .row2,
+.profile-right .row2 {
+    background-color: #f4fbfc;
+    border-top: 0px;
+    margin-top: 0px;
+}
+
+.profile-left .titlemedium {
+    margin-bottom: 1px;
+}
+
+.forum-subheader .titlemedium {
+    display: none;
+}
+
+.profile-right .largeframe {
+    background-color: #efe484;
+}
+
+#profile-header {
+    font-family: 'playfair display';
+    font-weight: 800!important;
+    text-transform: lowercase!important;
+}
+
+#profile-heading {
+    margin-top: -20px;
+}
+
+#MY_CONTENTS .row2 {
+    background-color: #f4fbfc;
+    margin-left: -10px;
+    border-top: 0px;
+    border-bottom: 5px solid #cdeaf0;
+}
+
+#MY_CONTENTS .tableborder {
+    padding: 0px;
+}
+
+.post-normal .row4,
+.row2 {
+    background-color: #c0e0e6;
+    border-top: 5px solid #cdeaf0;
+}
+
+.row1 {
+    background-color: #f4fbfc;
+}
+
+#boardstats .row2 {
+    text-align: center;
+}
+
+.darkrow1 {
+    font-style: italic;
+    font-family: times;
+    text-transform: lowercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin: 2px 0px;
+}
+
+.darkrow2 {
+    text-align: center;
+    font-style: italic;
+    font-family: times;
+    text-transform: lowercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin: 2px 0px;
+}
+
+td.darkrow2 {
+    display: none;
+}
+
+.darkrow3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin: 2px 0px;
+    background-color: #c0e0e6;
+}
+
+.hlight {
+    background-color: transparent;
+}
+
+.dlight {
+    background-color: transparent;
+}
+
+
+/*html template - mini profile*/
+
+.mprof {
+    position: relative;
+    padding: 5px;
+    color: #16191a;
+    background-color: #f9fdfd;
+    border: 2px solid #e5f1f3;
+    padding: 15px;
+    width: 160px;
+}
+
+.mprofname {
+    padding: 0px 2px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'roboto';
+    font-weight: 600;
+    color: #16191a;
+    letter-spacing: 1px;
+    font-size: 35px;
+    background-color: #efe484;
+    text-transform: lowercase;
+    font-style: italic;
+    letter-spacing: -2px;
+}
+
+.mprofname a {
+    padding: 0px 2px;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'roboto';
+    font-weight: 600;
+    color: #16191a!important;
+    letter-spacing: 1px;
+    font-size: 35px;
+    background-color: #efe484!important;
+    text-transform: lowercase!important;
+    font-style: italic;
+    letter-spacing: -2px;
+}
+
+.mav {
+    display: none;
+}
+
+.mprofcont {
+    display: none;
+}
+
+.mprof h1 {
+    margin: 0px 0px 10px 0px;
+    font-family: 'playfair display';
+    font-style: italic;
+    font-size: 15px;
+}
+
+.mprof span {
+    font-family: 'roboto';
+    font-size: 13px;
+    text-transform: lowercase;
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+.mprof span b {
+    font-weight: 500!important;
+    background-color: #cdeaf0;
+}
+
+.mprof a {
+    color: #16191a!important;
+    text-transform: lowercase!important;
+    background-color: #fbb6b6;
+}
+
+.mprof span a {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.mprof span a:hover {
+    background-color: #cdeaf0!important;
+}
+
+
+/*template css*/
+
+.temp1 {
+    margin: 0px auto;
+    width: 70%;
+    padding: 20px;
+    background-color: #f9fdfd;
+    border: 2px solid #e5f1f3;
+    color: #16191a;
+}
+
+.temp1 h1 {
+    margin: 10px 0px;
+    text-transform: lowercase;
+    font-family: 'playfair display';
+    font-weight: 800;
+    font-style: italic;
+    background-color: #efe484;
+    padding: 5px;
+    border-left: 40px solid #f9fdfd;
+    font-size: 30px;
+}
+
+.temp1 h1 span {
+    margin-left: -40px;
+}
+
+.temp1 p {
+    padding: 15px;
+    text-align: justify;
+}
+
+.temp1 p a {
+    background-color: #fbb6b6;
+    color: #16191a!important;
+    font-family: 'roboto';
+}
+
+.temp1 p a:hover {
+    background-color: #cdeaf0;
+}
+
+.temp1 p b {
+    background-color: #cdeaf0;
+    color: #16191a!important;
+    font-family: 'roboto';
+}
+
+
+/*topic view styles*/
+
+.activeuserstrip {
+    background-color: transparent;
+    padding: 10px;
+    margin: 2px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: helvetica;
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 10px;
+}
+
+.normalname {
+    display: none;
+}
+
+.normalname a {
+    font-size: 12px;
+}
+
+.unreg {
+    display: none;
+}
+
+.post1 {
+    background-color: #f4fbfc;
+    padding: 15px;
+}
+
+.post2 {
+    background-color: #f4fbfc;
+    padding: 15px;
+}
+
+.postdetails {
+    font-size: 10px;
+    border-top: 0px!important;
+}
+
+.postcolor {
+    font-size: 12px;
+    line-height: 160%;
+}
+
+.postlinksbar {
+    font-size: 0px;
+    padding: 0px;
+    margin: 5px -5px;
+    border-bottom: 3px solid #cdeaf0;
+}
+
+.postlinksbar a {
+    font-size: 10px;
+    padding: 3px 5px;
+    margin-right: 5px;
+    border: 2px solid #f4fbfc;
+    color: #16191a;
+    background-color: #fbb6b6;
+}
+
+.signature {
+    font-size: 10px;
+    color: #339;
+    line-height: 150%;
+}
