@@ -717,3 +717,74 @@ a:hover {
 .mtop3 b {
     font-weight: 500!important;
 }
+
+
+/*input buttons, e.g. submit, text input, etc*/
+
+.button-large {
+    padding: 5px 12px;
+    letter-spacing: 1px;
+    text-align: center;
+    border: 2px solid #f4fbfc;
+    color: #16191a;
+    background-color: #f3e88a;
+    margin: 5px 20px -10px 10px;
+    font-size: 10px;
+    font-family: 'roboto';
+    font-weight: 500;
+    min-width: 75px;
+    display: inline-block;
+}
+
+.button-small {
+    padding: 5px 10px;
+    font-size: 11px;
+    border-top: 5px solid #cdeaf0;
+    margin-top: -3px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.post-buttons-top {
+    margin-top: 3px;
+}
+
+.button-large.closed {
+    background: #252830;
+    padding: 7px 12px;
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+    color: #828898;
+    font-weight: bold;
+}
+
+.forminput,
+.codebuttons,
+.textinput,
+.radiobutton,
+.checkbox {
+    background-color: #dbf1f6;
+    border: 2px solid #f4fbfc;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 2px 5px;
+    vertical-align: middle;
+}
+
+input[type=submit],
+input[type=button],
+input[type=reset] {
+    letter-spacing: 1px;
+    color: #2f545b;
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'roboto';
+    margin: 3px;
+    padding: 3px 6px;
+    text-decoration: none;
+}
+
+.codebuttons {
+    font-size: 10px;
+}
