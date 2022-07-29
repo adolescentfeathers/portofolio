@@ -59,6 +59,7 @@
                 <div class="tableborder">
                     <div class="maintitle">Pragmatic Guide to Git</div>
                 </div>
+                <!-- nav -->
                 <span class="post-normal group4-post-normal">
                     <table width="100%" border="0" cellspacing="1" cellpadding="3">
                         <tr>
@@ -89,7 +90,36 @@
                     <td width='100%' valign='top' class='post2' id='pid_106' colspan='2'>
                         <div class="postcolor">
                             <div class="temp1">
-                                content here
+                                <!-- content git -->
+                                <nav id="navbar">
+                                    <header>Git Documentation</header>
+                                    <ul>
+                                        <li>
+                                            <a href="#Started" class="nav-link">Getting Started</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Git" class="nav-link">Working with Git</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Branches" class="nav-link">Organizing Repository with Branches and Tags</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Team" class="nav-link">Working with a team</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Merging" class="nav-link">Branches and merging revisited</a>
+                                        </li>
+                                        <li>
+                                            <a href="#History" class="nav-link">Working with the Repository's History</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Fixing" class="nav-link">Fixing Things</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Moving" class="nav-link">Moving Beyond the Basics</a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </td>
@@ -105,6 +135,362 @@
                 </table>
                 <div class="darkrow1" style="height:5px"></div>
                 </span>
+                <!-- getting started -->
+                <span class="post-normal group4-post-normal">
+                    <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                        <tr>
+                            <td valign="middle" class="row4" width="1%">
+                                <span class="normalname">
+                                    adolescentfeathers
+                                </span>
+                </td>
+                <td class="row4" valign="top" width="99%">
+                    <div class="row4" align="left" style="float:left;padding-top:4px;padding-bottom:4px">
+                        &nbsp; <span class="postdetails">
+                            <b>Posted:</b> Jul 28 2022, 11:23 AM
+                        </span>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                    <td valign="top" class="post2 miniprofile">
+                        <span class="postdetails">
+                            <div class="mprof">
+                                <div class="mprofname">
+                                    feathers
+                                </div>
+                                <h1>Administrator</h1>
+                            </div>
+                        </span>
+                    </td>
+                    <td width='100%' valign='top' class='post2' id='pid_106' colspan='2'>
+                        <div class="postcolor">
+                            <div class="temp1">
+                                <!-- content git -->
+                                <main>
+                                    <section class="main-section" id="Started">
+                                        <header>Getting Started</header>
+                                        <article>
+                                            <p>
+                                                You can instal Git in several different ways :
+                                                <ul>
+                                                    <li>by using one of the GUI installers</li>
+                                                    <li>by using a package management system</li>
+                                                    <li>by compiling it from source</li>
+                                                </ul>
+                                            </p>
+                                            <p>
+                                                <header>Configuring Git</header>
+                                                Configure Git to know who you are.
+                                                <code>
+                                                    git config --global user.name "Your Name"
+                                                    git config --global user.email "user@domain.com"
+                                                    
+                                                </code> Set the Git user for a specific Repository
+                                                <code>
+                                                    cd /path/to/Repository
+                                                    git config user.name "Your Name"
+                                                    git config user.email "user@domain.com"
+                                                </code> Turn colors on wherever possible in the Git UI
+                                                <code>
+                                                    git config --global color.ui auto
+                                                </code> Configure Git's editor.
+                                                <code>
+                                                    git config --global core.editor /path/to/editor
+                                                </code>
+                                            </p>
+                                            <p>
+                                                <header>Creating a New Repository</header>
+                                                Repositories in Git are stored on local file system right alongside the code they track. Create a repository by typing git init in the directory that you want to start tracking files in.
+                                                <p>
+                                                    Create a repository <br>
+                                                    <code>
+                                                        mkdir some-repository 
+                                                        cd some-repository 
+                                                        git init
+                                                    </code> <br> Create a repository in an existing directory, and add all files from that directory. <br>
+                                                    <code>
+                                                        cd /path/to/some/directory
+                                                        git init
+                                                        git add .
+                                                        git commit -m "some commit message"
+                                                    </code>
+                                                </p>
+                                            </p>
+                                            <p>
+                                                <header>Creating a Local Copy of an Existing Repository</header>
+                                                <p>
+                                                    Create a clone to remote repository to start making changes to it. The git clone command initializes a new repository local computer and fetches the entire history--all changes that have been tracked during the life of that repository.
+                                                </p>
+                                                <p>
+                                                    Clone a repository <br>
+                                                    <code>
+                                                        git clone some-repository
+                                                    </code>
+                                                </p>
+                                                <p>
+                                                    Clone a repository into a specific path <br>
+                                                    <code>
+                                                        git clone some-repository some-path
+                                                    </code>
+                                                </p>
+                                                <p>
+                                                    Create a shallow clone with the last fifty commits <br>
+                                                    <code>
+                                                        git clone --depth 50 some-repository
+                                                    </code>
+                                                </p>
+                                                <p>
+                                                    These are valid Git repository URls. <br>
+                                                    <code>
+                                                        user@ssh host::path_to_repo
+                                                        git://some_domain/path_to_repo
+                                                        http://some_domain/path_to_repo
+                                                        https://some_domain/path_to_repo/path_to_repo
+                                                    </code>
+                                                </p>
+                                            </p>
+                                        </article>
+                                    </section>
+                                </main>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="darkrow3" align="left"><span></span></td>
+                    <td class="darkrow3" nowrap="nowrap" align="left" colspan="2">
+                        <div class="darkrow3 post-buttons-bottom" align="left" style="float: left; width:auto;">
+
+                        </div>
+                    </td>
+                </tr>
+                </table>
+                <div class="darkrow1" style="height:5px"></div>
+                </span>
+                <!--working with git-->
+                <span class="post-normal group4-post-normal">
+                    <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                        <tr>
+                            <td valign="middle" class="row4" width="1%">
+                                <span class="normalname">
+                                    adolescentfeathers
+                                </span>
+                </td>
+                <td class="row4" valign="top" width="99%">
+                    <div class="row4" align="left" style="float:left;padding-top:4px;padding-bottom:4px">
+                        &nbsp; <span class="postdetails">
+                            <b>Posted:</b> Jul 28 2022, 08:23 AM
+                        </span>
+                    </div>
+                </td>
+                </tr>
+                <tr>
+                    <td valign="top" class="post2 miniprofile">
+                        <span class="postdetails">
+                            <div class="mprof">
+                                <div class="mprofname">
+                                    feathers
+                                </div>
+                                <h1>Administrator</h1>
+                            </div>
+                        </span>
+                    </td>
+                    <td width='100%' valign='top' class='post2' id='pid_106' colspan='2'>
+                        <div class="postcolor">
+                            <div class="temp1">
+                                <!-- content git -->
+                                <main>
+                                    <section class="main-section" id="Git">
+                                        <header>Working with Git</header>
+                                        <article>
+                                            <p>
+                                                A handful of commands are needed to get through most tasks.
+                                            </p>
+                                            <p>
+                                                <header>
+                                                    Seeing What Has Changed
+                                                </header>
+                                                <p>
+                                                    <ul>
+                                                        <li>
+                                                            What the status of a new repository looks like.
+                                                            <code>
+                                                                git status
+                                                                <i>
+                                                                    # on branch main 
+                                                                    #
+                                                                    # Initial commit 
+                                                                    #
+                                                                </i>
+                                                                nothing to commit (create/copy files and use "git add" to track)
+                                                            </code>
+                                                        </li>
+                                                        <li>
+                                                            What git status looks like in a repository with changes.
+                                                            <p>
+                                                                Git status requires a repository with some changes in its working tree to see the various output.
+                                                            </p>
+                                                            <code>
+                                                                git status 
+                                                                <i>
+                                                                    # On branch main 
+                                                                    # Changes to be committed:
+                                                                    # (use "git reset HEAD <file>..." to unstage)
+                                                                    #
+                                                                    # modified: castanaut.gemspec
+                                                                    #
+                                                                    # Changed but not updated:
+                                                                    # (use "git add <file>..." to update what will be committed)
+                                                                    # (use "git checkout -- <file>..." to discard changes in ...
+                                                                    #
+                                                                    # modified: README.txt
+                                                                    #
+                                                                    # Untracked files:
+                                                                    # (use "git add <file>..." to include in what will be ...
+                                                                    #
+                                                                    # pkg/
+                                                                </i>
+
+                                                            </code>
+                                                        </li>
+                                                        <li>
+                                                            What git status looks like with no changes
+                                                            <code>
+                                                                git status
+                                                                <i>
+                                                                    # On branch main
+                                                                </i>
+                                                                nothing to commit (working directory clean)
+                                                            </code>
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </p>
+                                            <p>
+                                                <header>Staging Changes to Commit</header>
+                                                <p>
+                                                    Git uses a two-step process to get changes into the repository. The first step is staging changes through git add. Staging a change adds it to the index, or staging area. This sits between the working tree and the actual repository.
+                                                    <ul>
+                                                        <li>
+                                                            Stage an entire file to Commit.
+                                                            <code>
+                                                                git add path/to/file 
+                                                                <i>... or ...</i>
+                                                                git add path/
+                                                                <i>... or everything under the current directory ...</i>
+                                                                git add
+                                                            </code>
+                                                        </li>
+                                                        <li>
+                                                            Add all files in the current repository.
+                                                            <code>
+                                                                git add -A|--all
+                                                            </code>
+                                                        </li>
+                                                        <li>
+                                                            Add all tracked files that have been changed.
+                                                            <code>
+                                                                git add -u|--update
+                                                            </code>
+                                                        </li>
+                                                        <li>
+                                                            Choose which changes to commit.
+                                                            <code>
+                                                                git add -p|patch
+                                                                <i>... or a specific file ...</i>
+                                                                git add -p path/to/file
+                                                            </code>
+                                                        </li>
+                                                        <li>
+                                                            Open the current diff in the editor.
+                                                            <code>
+                                                                git add --e 
+                                                                <i>... or a specific file ...</i>
+                                                                git add -e path/to/file
+                                                            </code>
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </p>
+                                            <p>
+                                                <header>Committing Changes</header>
+                                                <p>
+                                                    Git tracks changes to repository through commits, which make with the git commit command. Each commit requires a commit message. Use -m and a string in quotation marks for message or use Git's editor to write a message. Avoid git add and commit every
+                                                    change in working tree with -a parameter. It commits everyting staged and all the changes to working tree.
+                                                    <ul>
+                                                        <li>
+                                                            Stage and commit changes.
+                                                            <code>
+                                                                git add < some file > //remove space
+                                                                git commit -m "some message"
+                                                            </code>
+                                                        </li>
+                                                        <li>
+                                                            Commit all modified files.
+                                                            <code>
+                                                                git commit -m "Some message" -a 
+                                                            </code>
+                                                        </li>
+                                                        <li>
+                                                            Commit and launch editor for commit message.
+                                                            <code>
+                                                                git add < some file > //remove space
+                                                                git commit
+                                                            </some>
+                                                            </code>
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </p>
+                                            <p>
+                                                <header>Ignoring Files</header>
+                                                <p>
+                                                    Software projects generate a lot of cruft. Some of it doesn't need to commit.
+                                                    <ul>
+                                                        <li>
+                                                            Ignore a specific file and/or path called cache
+                                                            <code>
+                                                                Add the following to .gitignore:
+                                                                <b>cache</b>
+                                                            </code>
+                                                        </li>
+                                                        <li>
+                                                            Ignore all .swp files from Vim.
+                                                            <code>
+                                                                Add the following to .gitignore: 
+                                                                <b>*.swp</b>
+                                                            </code>
+                                                        </li>
+                                                        <li>
+                                                            Set up a global excludes file.
+                                                            <code>
+                                                                The excludesfile can exist anywhere on computer. The following example puts it in home directory in the .gitignore file: <br>
+                                                                <b>git config --global core.excludesfile \ ~/ .gitignore</b>
+                                                            </code>
+                                                        </li>
+                                                    </ul>
+                                                </p>
+                                            </p>
+                                        </article>
+                                    </section>
+                                </main>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="darkrow3" align="left"><span></span></td>
+                    <td class="darkrow3" nowrap="nowrap" align="left" colspan="2">
+                        <div class="darkrow3 post-buttons-bottom" align="left" style="float: left; width:auto;">
+
+                        </div>
+                    </td>
+                </tr>
+                </table>
+                <div class="darkrow1" style="height:5px"></div>
+                </span>
+                <!--footer-->
                 <div class="footer">
                     <div id="cred">
                         copyright 2022, <a href="">adolescentfeathers</a>.
@@ -115,10 +501,129 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="">
-        function sticky_relocate() { var window_top = $(window).scrollTop(); var div_top = $('.scroll').offset().top; if (window_top > div_top) { $('.userlinks').addClass('stick'); }else{ $('.userlinks').removeClass('stick'); } } $($function(){ $(window).scroll(sticky_relocate);
-        sticky_relocate; })
+    <script>
+        $(document).bind("contextmenu", function(e) {
+            return false;
+        });
     </script>
 </body>
+<style>
+    #navbar {
+        /*position: fixed;*/
+        min-width: 410px;
+        top: 0px;
+        left: 0px;
+        width: 300px;
+        height: 100%;
+        /* border-right: solid;
+        border-color: rgba(0, 22, 22, 0.4); */
+    }
+    
+    header {
+        color: black;
+        margin: 10px;
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: thin;
+    }
+    
+    #main-doc header {
+        text-align: left;
+        margin: 0px;
+    }
+    
+    #navbar ul {
+        height: 88%;
+        padding: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    #navbar li {
+        color: #4d4e53;
+        border-top: 1px solid;
+        list-style: none;
+        position: relative;
+        width: 100%;
+    }
+    
+    #navbar a {
+        display: block;
+        padding: 10px 30px;
+        color: #4d4e53;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+    #main-doc {
+        position: absolute;
+        margin-left: 310px;
+        padding: 20px;
+        margin-bottom: -110px;
+    }
+    
+    section article {
+        color: #4d4e53;
+        margin: 15px;
+        font-size: 0.96em;
+    }
+    
+    section li {
+        margin: 15px 0px 0px 20px;
+    }
+    
+    code {
+        display: block;
+        text-align: left;
+        white-space: pre-line;
+        position: relative;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 2;
+        background-color: #f7f7f7;
+        padding: 15px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+    
+    @media only screen and (max-width: 815px) {
+        /* for mobile phones : */
+        #navbar ul {
+            border: 1px solid;
+            height: 207px;
+        }
+        #navbar {
+            background-color: white;
+            position: absolute;
+            top: 0;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            max-height: 275px;
+            border: none;
+            z-index: 1;
+            border-bottom: 2px solid;
+        }
+        #main-doc {
+            position: relative;
+            margin-left: 0px;
+            margin-top: 270px;
+        }
+    }
+    
+    @media only screen and (max-width: 400px) {
+        #main-doc {
+            margin-left: -10px;
+        }
+        code {
+            margin-left: -10px;
+            width: 100%;
+            padding: 15px;
+            padding-left: 10px;
+            padding-right: 45px;
+            min-width: 233px;
+        }
+    }
+</style>
 
 </html>
